@@ -1,0 +1,525 @@
+---
+title: "<span style='font-size: 3.8rem;'> How to make a sharable code workflow for reproducible and efficient science </span><br>"
+author: "<br><b>Dax Kellie</b>, Martin Westgate  <br> ![](images/logos/ALA_Logo.png){style='width: auto; height: 100px; margin-top: 80px; padding-left: 20px; padding-right: 20px'} ![](images/logos/NCRIS_logo.png){style='width: auto; height: 80px; margin-top: 100px; padding-left: 20px; padding-right: 20px'} ![](images/logos/CSIRO_logo.png){style='width: auto; height: 100px; margin-top: 80px; padding-left: 20px; padding-right: 20px'}"
+title-slide-attributes: 
+  data-background-color: "#fde5ce"
+  data-background-image: images/title-trees.png
+  data-background-size: cover
+  data-background-opacity: "0.4"
+format: 
+  revealjs: 
+    theme: [default, custom.scss] 
+    transition-speed: slow
+editor: visual
+---
+
+
+
+# The replication crisis {background-color="#536e4e" style="color: #ffffff; font-size: 170%" transition="fade"}
+
+
+## Psychology in crisis? 
+
+:::: {.columns}
+::: {.column width="60%"}
+![](images/oa_2015.jpeg)
+:::
+
+::: {.column width="40%"}
+<br>[Of 100 replicated studies, only 39 replicated the original result]{style="font-size: 2.5rem"}
+:::
+::::
+
+::: aside
+::: {style="font-size: 60%;"}
+[Open Science Collaboration (2015). Estimating the Reproducibility of Psychological Science. *Science*](https://www.science.org/doi/full/10.1126/science.aac4716)
+:::
+:::
+
+## Biology & ecology in crisis?
+
+Evolutionary biology & ecology research is not immune to wider issues of scientific research
+
+<center>
+![](images/parker_et_al_2016_fig_1a.jpg){style="padding-top: 15px;"}
+</center>
+
+::: aside
+::: {style="font-size: 60%;"}
+[Parker et al (2015). Transparency in Ecology and Evolution: Real Problems, Real Solutions. *Trends in Ecology & Evolution*](https://www.sciencedirect.com/science/article/pii/S0169534716300957?via%3Dihub)
+:::
+:::
+
+
+## Questionable Research Practices {visibility="hidden"}
+
+Prevalent but probably unintentional
+
+<center>
+![](images/fraser_qrp.png){height="430" style="padding-top: 15px;"}
+</center>
+
+::: aside
+::: {style="font-size: 60%;"}
+[Fraser et al (2018). Questionable research practices in ecology and evolution. *PLOS ONE*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
+:::
+:::
+
+
+# Reproducibility {background-color="#536e4e" auto-animate="true" transition="fade" style="color: #ffffff; font-size: 170%"}
+
+
+## Available data *and* code?
+
+<center>
+![](images/culina_2020.png){style="padding-top: 15px;"}
+</center>
+
+[Without knowing how someone cleaned & edited their data, even with data, reproducing a result is difficult]{style="font-size:2rem;"}
+
+
+::: aside
+::: {style="font-size: 60%;"}
+[Culina et al (2020). Low availability of code in ecology: A call for urgent action. *PLOS Biology*](https://www.sciencedirect.com/science/article/pii/S0169534716300957?via%3Dihub)
+:::
+:::
+
+
+## Available code doesn't guarantee reproducibility
+
+Of 62 Registered Reports from Center of Open Science database:
+
+  * 41 had data available
+  * 37 had scripts available
+  * 31 scripts could be run
+  * **21 could reproduce main results <br>(34% of total, 57% of scripts)**
+
+::: aside
+::: {style="font-size: 60%;"}
+[Obels et al (2020). Low availability of code in ecology: A call for urgent action. *PLOS Biology*](https://www.sciencedirect.com/science/article/pii/S0169534716300957?via%3Dihub)
+:::
+:::
+
+
+# Reproducibility is hard {background-color="#536e4e" auto-animate="true" transition="fade" style="color: #ffffff; font-size: 170%; text-align:center;"}
+
+<center>
+![](images/oh_no.png){height="300"}
+</center>
+
+
+## Supporting reproducibility at the ALA
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<center>
+**galah**
+
+![](images/galah_logo.png){height=300}
+
+[https://galah.ala.org.au/](https://galah.ala.org.au/)
+</center>
+:::
+
+::: {.column width="50%"}
+<center>
+**ALA Labs**
+
+![](images/twitter-card-preview_frog-small.png){height=300}
+
+[https://labs.ala.org.au/](https://labs.ala.org.au/)
+</center>
+:::
+::::
+
+## Supporting reproducibility at the ALA
+
+:::: {.columns}
+
+::: {.column width="50%"}
+<center>
+**galah**
+</center>
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
+
+library(galah)
+
+galah_call() |>
+  galah_identify("reptilia") |>
+  galah_filter(year > 2020) |>
+  atlas_occurrences()
+```
+
+<br><br>
+
+[https://galah.ala.org.au/](https://galah.ala.org.au/)
+
+:::
+
+::: {.column width="50%"}
+<center>
+**ALA Labs**
+
+![](images/labs_preview.png){height=300}
+
+[https://labs.ala.org.au/](https://labs.ala.org.au/)
+</center>
+:::
+::::
+
+
+## The invisible workload of open research
+
+[With growing pressure from peers but little change from institutions of how research output is judged, open science is an intimidating amount of work]{style="font-size:2rem;"}
+
+<center>
+![](images/oh_no_success.jpg){height=300}
+</center>
+
+::: aside
+::: {style="font-size: 50%;"}
+[Alex Norris, webcomicname.com](https://webcomicname.com/)\
+
+[Hostler (2023). The invisible workload of open research. *Journal of Trial & Error*](https://journal.trialanderror.org/pub/the-invisible-workload)
+:::
+:::
+
+
+# Small steps <br> to improve reproducibility* <br> with big impacts {background-color="#536e4e" auto-animate="true" transition="fade" style="color: #ffffff; font-size: 150%"}
+
+
+::: {style="color: #ffffff; font-size: 50%"}
+<br><b>of code, mostly</b><br>
+:::
+
+
+# 1. Make your work environment shareable {background-color="#5D2E46" transition="slide" style="color: #ffffff; font-size: 120%"}
+
+
+## When loading a work environment... {background-color="#F8F1F5" style="font-size: 80%"}
+<br><br>
+This works...
+
+```{r}
+#| eval: false
+#| echo: true
+rm(list = ls())
+setwd("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023")
+```
+
+<br><br><br>
+...but usually only on *your* computer
+
+
+
+## R Projects {background-color="#F8F1F5" style="font-size: 80%"}
+
+:::: {.columns}
+
+:::{.column width="50%"}
+
+![](images/r-project_1.png){height=300}
+:::
+
+:::{.column width="50%"}
+
+:::{.fragment .fade-in fragment-index=1}
+![](images/r-project_2.png){height=300}
+:::
+:::
+::::
+
+
+
+## R Projects {background-color="#F8F1F5" style="font-size: 80%"}
+
+<br>
+
+Without R Project
+
+```{r}
+#| eval: false
+#| echo: true
+path = "C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023/images"
+```
+
+<br>
+
+With R Project
+
+```{r}
+#| eval: false
+#| echo: true
+path = "./images"
+```
+
+::: aside
+::: {style="font-size: 50%;"}
+Images from [*R for Non-Programmers* by Daniel Dauber](https://here.r-lib.org/)
+:::
+:::
+
+## The {here} package {background-color="#F8F1F5" style="font-size: 80%"}
+
+<br>
+
+Works nicely with R projects
+
+```{r}
+#| eval: false
+#| echo: true
+library(here)
+here::here()
+```
+
+```{r}
+#| eval: true
+#| echo: false
+#| warning: false
+#| message: false
+library(here)
+print("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023")
+```
+
+<br>
+
+Makes safe file paths easy
+
+```{r}
+#| eval: false
+#| echo: true
+here::here("images", "folder", "subfolder")
+```
+
+```{r}
+#| eval: true
+#| echo: false
+print("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023/images/folder/folder")
+```
+
+::: aside
+::: {style="font-size: 50%;"}
+[The here package website](https://here.r-lib.org/)
+:::
+:::
+
+## The {renv} package {background-color="#F8F1F5" style="font-size: 80%"}
+
+:::: {.columns}
+::: {.column width="80%"}
+
+Initialise a new project-local R library
+
+```{r}
+#| eval: false
+#| echo: true
+renv::init()
+```
+
+Save the state of the project to a lockfile
+
+```{r}
+#| eval: false
+#| echo: true
+renv::snapshot()
+```
+
+```
+{
+  "R": {
+    "Version": "4.2.3",
+    "Repositories": [
+      {
+        "Name": "CRAN",
+        "URL": "https://cloud.r-project.org"
+      }
+    ]
+  },
+  "Packages": {
+    "markdown": {
+      "Package": "markdown",
+      "Version": "1.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "4584a57f565dd7987d59dda3a02cfb41"
+    },
+    "mime": {
+      "Package": "mime",
+      "Version": "0.7",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "908d95ccbfd1dd274073ef07a7c93934"
+    }
+  }
+}
+```
+:::
+
+::: {.column width="20%"}
+
+![](images/renv_logo.svg)
+:::
+::::
+
+::: aside
+::: {style="font-size: 50%;"}
+[The renv package website](https://rstudio.github.io/renv/index.html)
+:::
+:::
+
+
+## Use GitHub {background-color="#F8F1F5" style="font-size: 80%;"}
+
+
+Share everything you need for a project with version control
+
+
+<center>
+![](images/github_repo.png){height=500}
+</center>
+
+## Use GitHub {background-color="#F8F1F5" style="font-size: 80%"}
+
+README at the front to explain high-level context, structure, metadata
+
+
+<center>
+![](images/github_repo-readme.png){height=500}
+</center>
+
+
+## Use GitHub {background-color="#F8F1F5" style="font-size: 80%"}
+
+Version control with GitHub Desktop is easy to learn because it’s visual
+
+
+<center>
+![](images/github_desktop.png){height=300}
+</center>
+
+
+# 2. Readable code, readable notes {background-color="#3E6990" transition="slide" style="color: #ffffff; font-size: 120%"}
+
+## Simple, clear names {background-color="#F1F5F9" style="font-size: 80%"}
+
+<br>
+
+Meh
+
+```{r}
+#| eval: false
+#| echo: true
+# Objects
+dat_FRT2_occs_sRept <- ...
+plot2.occMod <- ...
+
+# Functions
+filter <- function(x) {...}
+cool_func <- function(x) {...}
+```
+
+<br>
+
+Yay
+
+```{r}
+#| eval: false
+#| echo: true
+# Objects 
+bandicoots_filtered <- ...
+barplot_birds_high_temp <- ...
+
+# Functions
+filter_outliers <- function(x) {...}
+make_map <- function(x) {...}
+```
+
+
+
+## Simple, clear notes (with interpretations) {background-color="#F1F5F9" style="font-size: 80%"}
+
+<br>
+
+Meh
+
+```{r}
+#| eval: false
+#| echo: true
+model <- lmer(outcome ~ predictor_1 + predictor_2 + covariate_1 + 
+                (1|covariate_2) # random effect
+              data = data)
+summary(model)
+```
+
+<br>
+
+Yay
+
+```{r}
+#| eval: false
+#| echo: true
+# Test effects of temperature and rainfall on species richness
+model <- lmer(outcome ~ predictor_1 + predictor_2 + covariate_1 + 
+                (1|covariate_2) # random effect
+              data = data)
+summary(model)
+
+# Results show significant effect of predictor_1. This suggests [interpretation]...
+# However, confidence intervals of significant effect are wide
+```
+
+
+# 3. Render your code into a document <br>(with middle steps included){background-color="#C15933" transition="fade" style="color: #ffffff; font-size: 120%"}
+
+## Rendered documents show workflow from start to finish {background-color="#FBF2EF" style="font-size: 80%"}
+
+Documenting results, including middle steps
+
+  *  allows you to quickly reference work
+  *  lets others see data wrangling steps more clearly
+
+## Rendered output from start to finish {background-color="#FBF2EF" style="font-size: 80%"}
+
+Saving them in one place creates an accessible library of usable code
+
+## Rendered output from start to finish {background-color="#FBF2EF" style="font-size: 80%"}
+
+Quarto makes this easy
+
+
+# Summary
+
+  *  Make your work environment shareable: 
+    - Use an online repository (GitHub)
+    - Create safe links (the {here} package)
+    - Save package versions (the {renv} package)
+  *  Readable code, Readable notes
+    - Simple, clear object & function names
+    - Clear notes with interpretations
+  *  Render code output
+    - Save rendered files somewhere findable/shareable
+    - Use Quarto
+    
+## Thank you {background-color="#fde5ce"}
+
+::: columns
+::: {.column width="85%"}
+::: {style="font-size: 70%;"}
+<br> <b>Dax Kellie</b><br>Data Analyst & Science Lead<br>Science & Decision Support \| ALA <br>e: dax.kellie\@csiro.au<br> t: [\@daxkellie](https://twitter.com/daxkellie)<br> gh: [\@daxkellie](https://github.com/daxkellie) <br> <br> <b>Science & Decision Support team</b><br> Martin Westgate<br> Shandiya Balasubramaniam<br> Olivia Torresan<br> Amanda Buyan<br> <br> <em>These slides were made using Quarto & RStudio</em>
+:::
+:::
+
+::: {.column width="15%"}
+Slides: <br>
+
+
+![](images/logos/ALA_Logo.png){style="width: 100%; height: auto"}<br> ![](images/logos/NCRIS_logo.png){style="width: 100%; height: auto"}<br> ![](images/logos/CSIRO_logo.png){style="width: 100%; height: auto"}
+:::
+:::
+
