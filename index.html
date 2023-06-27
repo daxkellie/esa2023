@@ -540,18 +540,20 @@
 </section>
 
 <section>
-<section id="make-your-work-environment-shareable" class="title-slide slide level1 center" data-background-color="#5D2E46" data-transition="slide" style="color: #ffffff; font-size: 120%">
-<h1>1. Make your work environment shareable</h1>
+<section id="aim-to-make-your-work-environment-shareable" class="title-slide slide level1 center" data-background-color="#5D2E46" data-transition="fade" style="color: #ffffff; font-size: 120%">
+<h1>1. Aim to make your work environment shareable</h1>
 
 </section>
 <section id="when-loading-a-work-environment" class="slide level2" data-background-color="#F8F1F5" style="font-size: 80%">
 <h2>When loading a work environment…</h2>
+<div style="font-size: 120%;">
 <p><br><br> This works…</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><br><br><br> …but usually only on <em>your</em> computer</p>
+<p><br><br> …but usually only on <em>your</em> computer</p>
+</div>
 </section>
 <section id="r-projects" class="slide level2" data-background-color="#F8F1F5" style="font-size: 80%">
 <h2>R Projects</h2>
@@ -564,7 +566,12 @@
 </div>
 </div>
 </div>
-</section>
+
+<aside><div>
+<div style="font-size: 70%;">
+<p>Images from <a href="https://here.r-lib.org/"><em>R for Non-Programmers</em> by Daniel Dauber</a></p>
+</div>
+</div></aside></section>
 <section id="r-projects-1" class="slide level2" data-background-color="#F8F1F5" style="font-size: 80%">
 <h2>R Projects</h2>
 <p><br></p>
@@ -579,8 +586,8 @@
 </div>
 
 <aside><div>
-<div style="font-size: 50%;">
-<p>Images from <a href="https://here.r-lib.org/"><em>R for Non-Programmers</em> by Daniel Dauber</a></p>
+<div style="font-size: 70%;">
+<p><a href="https://rstats.wtf/projects.html">What they forgot to teach you about R by Jenny Bryan</a></p>
 </div>
 </div></aside></section>
 <section id="the-here-package" class="slide level2" data-background-color="#F8F1F5" style="font-size: 80%">
@@ -608,7 +615,7 @@
 </div>
 
 <aside><div>
-<div style="font-size: 50%;">
+<div style="font-size: 70%;">
 <p><a href="https://here.r-lib.org/">The here package website</a></p>
 </div>
 </div></aside></section>
@@ -657,7 +664,7 @@
 </div>
 
 <aside><div>
-<div style="font-size: 50%;">
+<div style="font-size: 70%;">
 <p><a href="https://rstudio.github.io/renv/index.html">The renv package website</a></p>
 </div>
 </div></aside></section>
@@ -689,27 +696,40 @@
 </section>
 <section id="simple-clear-names" class="slide level2" data-background-color="#F1F5F9" style="font-size: 80%">
 <h2>Simple, clear names</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p><br></p>
 <p>Meh</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Objects</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>dat_FRT2_occs_sRept <span class="ot">&lt;-</span> ...</span>
-<span id="cb12-3"><a href="#cb12-3"></a>plot2.occMod <span class="ot">&lt;-</span> ...</span>
-<span id="cb12-4"><a href="#cb12-4"></a></span>
-<span id="cb12-5"><a href="#cb12-5"></a><span class="co"># Functions</span></span>
-<span id="cb12-6"><a href="#cb12-6"></a>filter <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span>
-<span id="cb12-7"><a href="#cb12-7"></a>cool_func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-2"><a href="#cb12-2"></a>dat_band_occsFD2 <span class="ot">&lt;-</span> ...</span>
+<span id="cb12-3"><a href="#cb12-3"></a>plot2.occMod <span class="ot">&lt;-</span> ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment fade-in" data-fragment-index="1">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Functions</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>filter <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span>
+<span id="cb13-3"><a href="#cb13-3"></a>cool_func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
 <p><br></p>
 <p>Yay</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Objects </span></span>
-<span id="cb13-2"><a href="#cb13-2"></a>bandicoots_filtered <span class="ot">&lt;-</span> ...</span>
-<span id="cb13-3"><a href="#cb13-3"></a>barplot_birds_high_temp <span class="ot">&lt;-</span> ...</span>
-<span id="cb13-4"><a href="#cb13-4"></a></span>
-<span id="cb13-5"><a href="#cb13-5"></a><span class="co"># Functions</span></span>
-<span id="cb13-6"><a href="#cb13-6"></a>filter_outliers <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span>
-<span id="cb13-7"><a href="#cb13-7"></a>make_map <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Objects </span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>bandicoots_filtered <span class="ot">&lt;-</span> ...</span>
+<span id="cb14-3"><a href="#cb14-3"></a>barplot_birds_high_temp <span class="ot">&lt;-</span> ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Functions</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>filter_outliers <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span>
+<span id="cb15-3"><a href="#cb15-3"></a>make_map <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {...}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="simple-clear-notes-with-interpretations" class="slide level2" data-background-color="#F1F5F9" style="font-size: 80%">
@@ -717,22 +737,22 @@
 <p><br></p>
 <p>Meh</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lmer</span>(outcome <span class="sc">~</span> predictor_1 <span class="sc">+</span> predictor_2 <span class="sc">+</span> covariate_1 <span class="sc">+</span> </span>
-<span id="cb14-2"><a href="#cb14-2"></a>                (<span class="dv">1</span><span class="sc">|</span>covariate_2) <span class="co"># random effect</span></span>
-<span id="cb14-3"><a href="#cb14-3"></a>              <span class="at">data =</span> data)</span>
-<span id="cb14-4"><a href="#cb14-4"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lmer</span>(outcome <span class="sc">~</span> predictor_1 <span class="sc">+</span> predictor_2 <span class="sc">+</span> covariate_1 <span class="sc">+</span> </span>
+<span id="cb16-2"><a href="#cb16-2"></a>                (<span class="dv">1</span><span class="sc">|</span>covariate_2) <span class="co"># random effect</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>              <span class="at">data =</span> data)</span>
+<span id="cb16-4"><a href="#cb16-4"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>Yay</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Test effects of temperature and rainfall on species richness</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a>model <span class="ot">&lt;-</span> <span class="fu">lmer</span>(outcome <span class="sc">~</span> predictor_1 <span class="sc">+</span> predictor_2 <span class="sc">+</span> covariate_1 <span class="sc">+</span> </span>
-<span id="cb15-3"><a href="#cb15-3"></a>                (<span class="dv">1</span><span class="sc">|</span>covariate_2) <span class="co"># random effect</span></span>
-<span id="cb15-4"><a href="#cb15-4"></a>              <span class="at">data =</span> data)</span>
-<span id="cb15-5"><a href="#cb15-5"></a><span class="fu">summary</span>(model)</span>
-<span id="cb15-6"><a href="#cb15-6"></a></span>
-<span id="cb15-7"><a href="#cb15-7"></a><span class="co"># Results show significant effect of predictor_1. This suggests [interpretation]...</span></span>
-<span id="cb15-8"><a href="#cb15-8"></a><span class="co"># However, confidence intervals of significant effect are wide</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># Test effects of temperature and rainfall on species richness</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a>model <span class="ot">&lt;-</span> <span class="fu">lmer</span>(outcome <span class="sc">~</span> predictor_1 <span class="sc">+</span> predictor_2 <span class="sc">+</span> covariate_1 <span class="sc">+</span> </span>
+<span id="cb17-3"><a href="#cb17-3"></a>                (<span class="dv">1</span><span class="sc">|</span>covariate_2) <span class="co"># random effect</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a>              <span class="at">data =</span> data)</span>
+<span id="cb17-5"><a href="#cb17-5"></a><span class="fu">summary</span>(model)</span>
+<span id="cb17-6"><a href="#cb17-6"></a></span>
+<span id="cb17-7"><a href="#cb17-7"></a><span class="co"># Results show significant effect of predictor_1. This suggests [interpretation]...</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a><span class="co"># However, confidence intervals of significant effect are wide</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section></section>
 <section>
@@ -740,41 +760,62 @@
 <h1>3. Render your code into a document <br>(with middle steps included)</h1>
 
 </section>
-<section id="rendered-documents-show-workflow-from-start-to-finish" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
-<h2>Rendered documents show workflow from start to finish</h2>
-<p>Documenting results, including middle steps</p>
+<section id="document-results-for-easy-referencing-later" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
+<h2>Document results for easy referencing later</h2>
+<p><video data-src="images/alpha-hulls.mov" controls=""><a href="images/alpha-hulls.mov">Video</a></video></p>
+</section>
+<section id="document-results-for-easy-referencing-later-1" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
+<h2>Document results for easy referencing later</h2>
+<div style="font-size: 120%">
 <ul>
-<li>allows you to quickly reference work</li>
-<li>lets others see data wrangling steps more clearly</li>
+<li><p>Rendering a document:</p>
+<ul>
+<li>Allows you to quickly reference work (because you don’t need to rerun your code)</li>
+<li>Lets others see data wrangling steps more clearly</li>
+</ul></li>
+<li><p>Saving them in one place creates an accessible library of usable code. This can be public or private</p></li>
+<li><p><strong>Quarto makes this easy</strong></p></li>
 </ul>
-</section>
-<section id="rendered-output-from-start-to-finish" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
-<h2>Rendered output from start to finish</h2>
-<p>Saving them in one place creates an accessible library of usable code</p>
-</section>
-<section id="rendered-output-from-start-to-finish-1" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
-<h2>Rendered output from start to finish</h2>
-<p>Quarto makes this easy</p>
+</div>
 </section></section>
 <section>
-<section id="summary" class="title-slide slide level1 center">
+<section id="summary" class="title-slide slide level1 center" data-background-color="#ffffff">
 <h1>Summary</h1>
+
+</section>
+<section id="small-steps-to-improve-reproducibility-with-big-impacts-1" class="slide level2">
+<h2>Small steps to improve reproducibility with big impacts</h2>
 <ul>
-<li>Make your work environment shareable: - Use an online repository (GitHub) - Create safe links (the {here} package) - Save package versions (the {renv} package)</li>
-<li>Readable code, Readable notes - Simple, clear object &amp; function names - Clear notes with interpretations</li>
-<li>Render code output - Save rendered files somewhere findable/shareable - Use Quarto</li>
+<li>Aim to make your work environment shareable</li>
 </ul>
+<pre><code>-  Create projects with safe links (R Projects + {here})
+-  Save package versions ({renv})
+-  Use an online repository (GitHub)</code></pre>
+<ul>
+<li>Readable code, readable notes</li>
+</ul>
+<pre><code>-  Simple, clear object &amp; function names
+-  Clear notes with interpretations of results</code></pre>
+<ul>
+<li>Render your code into a document</li>
+</ul>
+<pre><code>-  Save rendered files somewhere findable/shareable to reference later
+-  Quarto makes this easier than ever</code></pre>
 </section>
 <section id="thank-you" class="slide level2" data-background-color="#fde5ce">
 <h2>Thank you</h2>
 <div class="columns">
-<div class="column" style="width:85%;">
+<div class="column" style="width:60%;">
 <div style="font-size: 70%;">
 <p><br> <b>Dax Kellie</b><br>Data Analyst &amp; Science Lead<br>Science &amp; Decision Support | ALA <br>e: dax.kellie@csiro.au<br> t: <a href="https://twitter.com/daxkellie">@daxkellie</a><br> gh: <a href="https://github.com/daxkellie">@daxkellie</a> <br> <br> <b>Science &amp; Decision Support team</b><br> Martin Westgate<br> Shandiya Balasubramaniam<br> Olivia Torresan<br> Amanda Buyan<br> <br> <em>These slides were made using Quarto &amp; RStudio</em></p>
 </div>
-</div><div class="column" style="width:15%;">
+</div><div class="column" style="width:40%;">
+<center>
 <p>Slides: <br></p>
-<p><img data-src="images/logos/ALA_Logo.png" style="width: 100%; height: auto"><br> <img data-src="images/logos/NCRIS_logo.png" style="width: 100%; height: auto"><br> <img data-src="images/logos/CSIRO_logo.png" style="width: 100%; height: auto"></p>
+<p><img data-src="images/qr-code.png" height="170"></p>
+<hr>
+<img data-src="images/logos/ALA_Logo.png" style="width: auto; height: 90px"><br> <img data-src="images/logos/NCRIS_logo.png" style="width: auto; height: 90px"> <img data-src="images/logos/CSIRO_logo.png" style="width: auto; height: 90px">
+</center>
 </div>
 </div>
 <div class="footer footer-default">

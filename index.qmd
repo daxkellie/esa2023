@@ -199,10 +199,13 @@ galah_call() |>
 :::
 
 
-# 1. Make your work environment shareable {background-color="#5D2E46" transition="slide" style="color: #ffffff; font-size: 120%"}
+# 1. Aim to make your work environment shareable {background-color="#5D2E46" transition="fade" style="color: #ffffff; font-size: 120%"}
 
 
 ## When loading a work environment... {background-color="#F8F1F5" style="font-size: 80%"}
+
+:::{style="font-size: 120%;"}
+
 <br><br>
 This works...
 
@@ -213,10 +216,10 @@ rm(list = ls())
 setwd("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023")
 ```
 
-<br><br><br>
+<br><br>
 ...but usually only on *your* computer
 
-
+:::
 
 ## R Projects {background-color="#F8F1F5" style="font-size: 80%"}
 
@@ -235,6 +238,12 @@ setwd("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023")
 :::
 ::::
 
+
+::: aside
+::: {style="font-size: 70%;"}
+Images from [*R for Non-Programmers* by Daniel Dauber](https://here.r-lib.org/)
+:::
+:::
 
 
 ## R Projects {background-color="#F8F1F5" style="font-size: 80%"}
@@ -260,8 +269,8 @@ path = "./images"
 ```
 
 ::: aside
-::: {style="font-size: 50%;"}
-Images from [*R for Non-Programmers* by Daniel Dauber](https://here.r-lib.org/)
+::: {style="font-size: 70%;"}
+[What they forgot to teach you about R by Jenny Bryan](https://rstats.wtf/projects.html)
 :::
 :::
 
@@ -304,7 +313,7 @@ print("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023/images/folder/fol
 ```
 
 ::: aside
-::: {style="font-size: 50%;"}
+::: {style="font-size: 70%;"}
 [The here package website](https://here.r-lib.org/)
 :::
 :::
@@ -368,7 +377,7 @@ renv::snapshot()
 ::::
 
 ::: aside
-::: {style="font-size: 50%;"}
+::: {style="font-size: 70%;"}
 [The renv package website](https://rstudio.github.io/renv/index.html)
 :::
 :::
@@ -408,6 +417,9 @@ Version control with GitHub Desktop is easy to learn because it’s visual
 
 ## Simple, clear names {background-color="#F1F5F9" style="font-size: 80%"}
 
+:::: columns
+::: {.column width="50%"}
+
 <br>
 
 Meh
@@ -416,13 +428,27 @@ Meh
 #| eval: false
 #| echo: true
 # Objects
-dat_FRT2_occs_sRept <- ...
+dat_band_occsFD2 <- ...
 plot2.occMod <- ...
+```
 
+:::{.fragment .fade-in fragment-index=1}
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
 # Functions
 filter <- function(x) {...}
 cool_func <- function(x) {...}
 ```
+
+:::
+
+:::
+
+::: {.column width="50%"}
 
 <br>
 
@@ -434,12 +460,24 @@ Yay
 # Objects 
 bandicoots_filtered <- ...
 barplot_birds_high_temp <- ...
+```
 
+:::{.fragment .fade-in fragment-index=1}
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
 # Functions
 filter_outliers <- function(x) {...}
 make_map <- function(x) {...}
 ```
 
+:::
+
+:::
+::::
 
 
 ## Simple, clear notes (with interpretations) {background-color="#F1F5F9" style="font-size: 80%"}
@@ -477,49 +515,64 @@ summary(model)
 
 # 3. Render your code into a document <br>(with middle steps included){background-color="#C15933" transition="fade" style="color: #ffffff; font-size: 120%"}
 
-## Rendered documents show workflow from start to finish {background-color="#FBF2EF" style="font-size: 80%"}
+## Document results for easy referencing later {background-color="#FBF2EF" style="font-size: 80%"}
 
-Documenting results, including middle steps
+![](images/alpha-hulls.mov)
 
-  *  allows you to quickly reference work
-  *  lets others see data wrangling steps more clearly
+## Document results for easy referencing later {background-color="#FBF2EF" style="font-size: 80%"}
 
-## Rendered output from start to finish {background-color="#FBF2EF" style="font-size: 80%"}
+:::{style="font-size: 120%"}
 
-Saving them in one place creates an accessible library of usable code
+  *  Rendering a document:
+     *  Allows you to quickly reference work (because you don't need to rerun your code)
+     *  Lets others see data wrangling steps more clearly
 
-## Rendered output from start to finish {background-color="#FBF2EF" style="font-size: 80%"}
+  *  Saving them in one place creates an accessible library of usable code. This can be public or private
 
-Quarto makes this easy
+  *  **Quarto makes this easy**
+
+:::
 
 
-# Summary
+# Summary {background-color="#ffffff"}
 
-  *  Make your work environment shareable: 
-    - Use an online repository (GitHub)
-    - Create safe links (the {here} package)
-    - Save package versions (the {renv} package)
-  *  Readable code, Readable notes
-    - Simple, clear object & function names
-    - Clear notes with interpretations
-  *  Render code output
-    - Save rendered files somewhere findable/shareable
-    - Use Quarto
+## Small steps to improve reproducibility with big impacts
+
+  *  Aim to make your work environment shareable
+  
+    -  Create projects with safe links (R Projects + {here})
+    -  Save package versions ({renv})
+    -  Use an online repository (GitHub)
+    
+  *  Readable code, readable notes
+  
+    -  Simple, clear object & function names
+    -  Clear notes with interpretations of results
+    
+  *  Render your code into a document
+  
+    -  Save rendered files somewhere findable/shareable to reference later
+    -  Quarto makes this easier than ever
     
 ## Thank you {background-color="#fde5ce"}
 
 ::: columns
-::: {.column width="85%"}
+::: {.column width="60%"}
 ::: {style="font-size: 70%;"}
 <br> <b>Dax Kellie</b><br>Data Analyst & Science Lead<br>Science & Decision Support \| ALA <br>e: dax.kellie\@csiro.au<br> t: [\@daxkellie](https://twitter.com/daxkellie)<br> gh: [\@daxkellie](https://github.com/daxkellie) <br> <br> <b>Science & Decision Support team</b><br> Martin Westgate<br> Shandiya Balasubramaniam<br> Olivia Torresan<br> Amanda Buyan<br> <br> <em>These slides were made using Quarto & RStudio</em>
 :::
 :::
 
-::: {.column width="15%"}
+::: {.column width="40%"}
+<center>
 Slides: <br>
 
+![](images/qr-code.png){height=170}
 
-![](images/logos/ALA_Logo.png){style="width: 100%; height: auto"}<br> ![](images/logos/NCRIS_logo.png){style="width: 100%; height: auto"}<br> ![](images/logos/CSIRO_logo.png){style="width: 100%; height: auto"}
+--------------------------------------------------------------------------------
+
+![](images/logos/ALA_Logo.png){style="width: auto; height: 90px"}<br> ![](images/logos/NCRIS_logo.png){style="width: auto; height: 90px"} ![](images/logos/CSIRO_logo.png){style="width: auto; height: 90px"}
+</center>
 :::
 :::
 
