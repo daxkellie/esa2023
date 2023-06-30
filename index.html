@@ -7,10 +7,12 @@
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.290">
 
-  <meta name="author" content=" Dax Kellie, Martin Westgate     ">
+  <meta name="author" content=" Dax Kellie, Martin Westgate         @daxkellie">
   <title> How to make a sharable code workflow for reproducible and efficient science  </title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -389,18 +391,30 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-color="#fde5ce" data-background-image="images/title-trees.png" data-background-opacity="0.4" data-background-size="cover" class="quarto-title-block center">
+<section id="title-slide" data-background-color="#fde5ce" data-background-image="images/title-trees.png" data-background-opacity="0.3" data-background-size="cover" class="quarto-title-block center">
   <h1 class="title"><span style="font-size: 3.8rem;"> How to make a sharable code workflow for reproducible and efficient science </span><br></h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<br><b>Dax Kellie</b>, Martin Westgate <br> <img data-src="images/logos/ALA_Logo.png" style="width: auto; height: 100px; margin-top: 80px; padding-left: 20px; padding-right: 20px"> <img data-src="images/logos/NCRIS_logo.png" style="width: auto; height: 80px; margin-top: 100px; padding-left: 20px; padding-right: 20px"> <img data-src="images/logos/CSIRO_logo.png" style="width: auto; height: 100px; margin-top: 80px; padding-left: 20px; padding-right: 20px"> 
+<br><b>Dax Kellie</b>, Martin Westgate <br> <img data-src="images/logos/ALA_Logo.png" style="width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px"> <img data-src="images/logos/NCRIS_logo.png" style="width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px"> <img data-src="images/logos/CSIRO_logo.png" style="width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px"> <br> <i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i> <span style="font-size: 2.5rem;"><span class="citation" data-cites="daxkellie">@daxkellie</span></span> 
 </div>
 </div>
 </div>
 
 </section>
+<section id="acknowledgement" class="slide level2" data-menu-title="Acknowledgement" data-background-image="images/square-rock.jpg" data-background-opacity="0.3">
+<h2></h2>
+<br><br>
+<center>
+<span style="color:#000000;">I acknowledge the Traditional Owners of the lands on which I live and work, the Ngunnawal people, and pay my respects to Elders past and present. I recognise the significance of this environment to Traditional Owners, and acknowledge their continuing connection to Country.</span>
+</center>
+
+<aside><div>
+<div style="font-size: 60%; color: #000000;">
+<p>Square Rock, Namadgi National Park, Ngunnawal Country</p>
+</div>
+</div></aside></section>
 <section>
 <section id="the-replication-crisis" class="title-slide slide level1 center" data-background-color="#536e4e" style="color: #ffffff; font-size: 170%" data-transition="fade">
 <h1>The replication crisis</h1>
@@ -423,17 +437,19 @@
 </div></aside></section>
 <section id="biology-ecology-in-crisis" class="slide level2">
 <h2>Biology &amp; ecology in crisis?</h2>
+<div style="font-size:80%;">
 <p>Evolutionary biology &amp; ecology research is not immune to wider issues of scientific research</p>
 <center>
-<img data-src="images/parker_et_al_2016_fig_1a.jpg" style="padding-top: 15px;">
+<img data-src="images/fraser_qrp.png" height="390">
 </center>
+<p>Questionable Research Practices are prevalent but usually unintentional</p>
+</div>
 
 <aside><div>
 <div style="font-size: 60%;">
-<p><a href="https://www.sciencedirect.com/science/article/pii/S0169534716300957?via%3Dihub">Parker et al (2015). Transparency in Ecology and Evolution: Real Problems, Real Solutions. <em>Trends in Ecology &amp; Evolution</em></a></p>
+<p><a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303">Fraser et al (2018). Questionable research practices in ecology and evolution. <em>PLOS ONE</em></a></p>
 </div>
-</div></aside></section>
-</section>
+</div></aside></section></section>
 <section>
 <section id="reproducibility" class="title-slide slide level1 center" data-background-color="#536e4e" data-auto-animate="true" data-transition="fade" style="color: #ffffff; font-size: 170%">
 <h1 data-id="quarto-animate-title">Reproducibility</h1>
@@ -441,10 +457,22 @@
 </section>
 <section id="available-data-and-code" class="slide level2">
 <h2>Available data <em>and</em> code?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <center>
-<img data-src="images/culina_2020.png" style="padding-top: 15px;">
+<img data-src="images/culina_2020b.png" style="padding-top: 15px;" height="400">
 </center>
+</div><div class="column" style="width:50%;">
+<div class="fragment fade-in" data-fragment-index="1">
+<center>
+<img data-src="images/culina_2020a.png" style="padding-top: 15px;" height="400">
+</center>
+</div>
+</div>
+</div>
+<div class="fragment fade-in" data-fragment-index="1">
 <p><span style="font-size:2rem;">Without knowing how someone cleaned &amp; edited their data, even with data, reproducing a result is difficult</span></p>
+</div>
 
 <aside><div>
 <div style="font-size: 60%;">
@@ -455,15 +483,14 @@
 <h2>Available code doesn’t guarantee reproducibility</h2>
 <p>Of 62 Registered Reports from Center of Open Science database:</p>
 <ul>
-<li>41 had data available</li>
-<li>37 had scripts available</li>
+<li>37 had scripts available (60%)</li>
 <li>31 scripts could be run</li>
 <li><strong>21 could reproduce main results <br>(34% of total, 57% of scripts)</strong></li>
 </ul>
 
 <aside><div>
 <div style="font-size: 60%;">
-<p><a href="https://www.sciencedirect.com/science/article/pii/S0169534716300957?via%3Dihub">Obels et al (2020). Low availability of code in ecology: A call for urgent action. <em>PLOS Biology</em></a></p>
+<p><a href="http://journals.sagepub.com/doi/10.1177/2515245920918872">Obels et al (2020). Analysis of Open Data and Computational Reproducibility in Registered Reports in Psychology. <em>Advances in Methods and Practices in Psychological Science</em></a></p>
 </div>
 </div></aside></section></section>
 <section>
@@ -535,7 +562,7 @@
 <section id="small-steps-to-improve-reproducibility-with-big-impacts" class="title-slide slide level1 center" data-background-color="#536e4e" data-auto-animate="true" data-transition="fade" style="color: #ffffff; font-size: 150%">
 <h1 data-id="quarto-animate-title">Small steps <br> to improve reproducibility* <br> with big impacts</h1>
 <div style="color: #ffffff; font-size: 50%">
-<p><br><b>of code, mostly</b><br></p>
+<p><br><b>*of code, mostly</b><br></p>
 </div>
 </section>
 
@@ -610,7 +637,7 @@
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023/images/folder/folder"</code></pre>
+<pre><code>[1] "C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023/images/folder/subfolder"</code></pre>
 </div>
 </div>
 
@@ -670,7 +697,7 @@
 </div></aside></section>
 <section id="use-github" class="slide level2" data-background-color="#F8F1F5" style="font-size: 80%;">
 <h2>Use GitHub</h2>
-<p>Share everything you need for a project with version control</p>
+<p>Backup your project online, share your project with others</p>
 <center>
 <img data-src="images/github_repo.png" height="500">
 </center>
@@ -762,21 +789,26 @@
 </section>
 <section id="document-results-for-easy-referencing-later" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
 <h2>Document results for easy referencing later</h2>
-<p><video data-src="images/alpha-hulls.mov" controls=""><a href="images/alpha-hulls.mov">Video</a></video></p>
+<p>Quickly reference and share your work (because you don’t need to rerun your code) <video data-src="images/alpha-hulls.mov" controls=""><a href="images/alpha-hulls.mov">Video</a></video></p>
 </section>
 <section id="document-results-for-easy-referencing-later-1" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
 <h2>Document results for easy referencing later</h2>
-<div style="font-size: 120%">
-<ul>
-<li><p>Rendering a document:</p>
-<ul>
-<li>Allows you to quickly reference work (because you don’t need to rerun your code)</li>
-<li>Lets others see data wrangling steps more clearly</li>
-</ul></li>
-<li><p>Saving them in one place creates an accessible library of usable code. This can be public or private</p></li>
-<li><p><strong>Quarto makes this easy</strong></p></li>
-</ul>
+Quarto is like a refined, updated R Markdown - it’s easy and makes documents look <em>nice</em>
+<center>
+<img data-src="images/quarto-example.png" height="500">
+</center>
+
+<aside><div>
+<div style="font-size: 70%;">
+<p><a href="https://quarto.org/">Quarto website</a></p>
 </div>
+</div></aside></section>
+<section id="document-results-for-easy-referencing-later-2" class="slide level2" data-background-color="#FBF2EF" style="font-size: 80%">
+<h2>Document results for easy referencing later</h2>
+<p>Saving them in one place creates an accessible library of usable code. <br>This can be public or private</p>
+<center>
+<img data-src="images/posts-labs-library.png" height="450">
+</center>
 </section></section>
 <section>
 <section id="summary" class="title-slide slide level1 center" data-background-color="#ffffff">
@@ -799,7 +831,8 @@
 <ul>
 <li>Render your code into a document</li>
 </ul>
-<pre><code>-  Save rendered files somewhere findable/shareable to reference later
+<pre><code>-  Quickly reference your work (because you don't need to rerun your code)
+-  Save rendered files somewhere findable/shareable to reference later
 -  Quarto makes this easier than ever</code></pre>
 </section>
 <section id="thank-you" class="slide level2" data-background-color="#fde5ce">
@@ -807,7 +840,7 @@
 <div class="columns">
 <div class="column" style="width:60%;">
 <div style="font-size: 70%;">
-<p><br> <b>Dax Kellie</b><br>Data Analyst &amp; Science Lead<br>Science &amp; Decision Support | ALA <br>e: dax.kellie@csiro.au<br> t: <a href="https://twitter.com/daxkellie">@daxkellie</a><br> gh: <a href="https://github.com/daxkellie">@daxkellie</a> <br> <br> <b>Science &amp; Decision Support team</b><br> Martin Westgate<br> Shandiya Balasubramaniam<br> Olivia Torresan<br> Amanda Buyan<br> <br> <em>These slides were made using Quarto &amp; RStudio</em></p>
+<p><br> <b>Dax Kellie</b><br>Data Analyst &amp; Science Lead<br>Science &amp; Decision Support | ALA <br>e: dax.kellie@csiro.au<br> <i class="fa-brands fa-twitter fa-lg" aria-label="twitter"></i>: <a href="https://twitter.com/daxkellie">@daxkellie</a><br> gh: <a href="https://github.com/daxkellie">@daxkellie</a> <br> <br> <b>Science &amp; Decision Support team</b><br> Martin Westgate, Fonti Kar, Olivia Torresan<br> Shandiya Balasubramaniam, Amanda Buyan<br>Juliet Seers, Callum Waite<br> <br> <em>These slides were made using Quarto &amp; RStudio</em></p>
 </div>
 </div><div class="column" style="width:40%;">
 <center>

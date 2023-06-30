@@ -1,11 +1,11 @@
 ---
 title: "<span style='font-size: 3.8rem;'> How to make a sharable code workflow for reproducible and efficient science </span><br>"
-author: "<br><b>Dax Kellie</b>, Martin Westgate  <br> ![](images/logos/ALA_Logo.png){style='width: auto; height: 100px; margin-top: 80px; padding-left: 20px; padding-right: 20px'} ![](images/logos/NCRIS_logo.png){style='width: auto; height: 80px; margin-top: 100px; padding-left: 20px; padding-right: 20px'} ![](images/logos/CSIRO_logo.png){style='width: auto; height: 100px; margin-top: 80px; padding-left: 20px; padding-right: 20px'}"
+author: "<br><b>Dax Kellie</b>, Martin Westgate  <br> ![](images/logos/ALA_Logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} ![](images/logos/NCRIS_logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} ![](images/logos/CSIRO_logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} <br> {{< fa brands twitter size=lg >}} <span style='font-size: 2.5rem;'>@daxkellie</span>"
 title-slide-attributes: 
   data-background-color: "#fde5ce"
   data-background-image: images/title-trees.png
   data-background-size: cover
-  data-background-opacity: "0.4"
+  data-background-opacity: "0.3"
 format: 
   revealjs: 
     theme: [default, custom.scss] 
@@ -14,8 +14,22 @@ editor: visual
 ---
 
 
+##  {#acknowledgement data-menu-title="Acknowledgement" background-image="images/square-rock.jpg" background-opacity="0.3"}
+
+<br><br>
+<center>
+[I acknowledge the Traditional Owners of the lands on which I live and work, the Ngunnawal people, and pay my respects to Elders past and present. I recognise the significance of this environment to Traditional Owners, and acknowledge their continuing connection to Country.]{style="color:#000000;"}
+</center>
+
+::: aside
+::: {style="font-size: 60%; color: #000000;"}
+Square Rock, Namadgi National Park, Ngunnawal Country
+:::
+:::
+
 
 # The replication crisis {background-color="#536e4e" style="color: #ffffff; font-size: 170%" transition="fade"}
+
 
 
 ## Psychology in crisis? 
@@ -38,27 +52,16 @@ editor: visual
 
 ## Biology & ecology in crisis?
 
+::: {style="font-size:80%;"}
 Evolutionary biology & ecology research is not immune to wider issues of scientific research
 
-<center>
-![](images/parker_et_al_2016_fig_1a.jpg){style="padding-top: 15px;"}
-</center>
-
-::: aside
-::: {style="font-size: 60%;"}
-[Parker et al (2015). Transparency in Ecology and Evolution: Real Problems, Real Solutions. *Trends in Ecology & Evolution*](https://www.sciencedirect.com/science/article/pii/S0169534716300957?via%3Dihub)
-:::
-:::
-
-
-## Questionable Research Practices {visibility="hidden"}
-
-Prevalent but probably unintentional
 
 <center>
-![](images/fraser_qrp.png){height="430" style="padding-top: 15px;"}
+![](images/fraser_qrp.png){height="390"}
 </center>
 
+Questionable Research Practices are prevalent but usually unintentional
+:::
 ::: aside
 ::: {style="font-size: 60%;"}
 [Fraser et al (2018). Questionable research practices in ecology and evolution. *PLOS ONE*](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200303)
@@ -66,17 +69,36 @@ Prevalent but probably unintentional
 :::
 
 
+
 # Reproducibility {background-color="#536e4e" auto-animate="true" transition="fade" style="color: #ffffff; font-size: 170%"}
 
 
 ## Available data *and* code?
 
+:::: {.columns}
+::: {.column width="50%"}
+
 <center>
-![](images/culina_2020.png){style="padding-top: 15px;"}
+![](images/culina_2020b.png){height=400 style="padding-top: 15px;"}
 </center>
 
-[Without knowing how someone cleaned & edited their data, even with data, reproducing a result is difficult]{style="font-size:2rem;"}
+:::
 
+::: {.column width="50%"}
+::: {.fragment .fade-in fragment-index=1}
+
+<center>
+![](images/culina_2020a.png){height=400 style="padding-top: 15px;"}
+</center>
+
+:::
+:::
+
+::::
+
+::: {.fragment .fade-in fragment-index=1}
+[Without knowing how someone cleaned & edited their data, even with data, reproducing a result is difficult]{style="font-size:2rem;"}
+:::
 
 ::: aside
 ::: {style="font-size: 60%;"}
@@ -89,14 +111,13 @@ Prevalent but probably unintentional
 
 Of 62 Registered Reports from Center of Open Science database:
 
-  * 41 had data available
-  * 37 had scripts available
+  * 37 had scripts available (60%)
   * 31 scripts could be run
   * **21 could reproduce main results <br>(34% of total, 57% of scripts)**
 
 ::: aside
 ::: {style="font-size: 60%;"}
-[Obels et al (2020). Low availability of code in ecology: A call for urgent action. *PLOS Biology*](https://www.sciencedirect.com/science/article/pii/S0169534716300957?via%3Dihub)
+[Obels et al (2020). Analysis of Open Data and Computational Reproducibility in Registered Reports in Psychology. *Advances in Methods and Practices in Psychological Science*](http://journals.sagepub.com/doi/10.1177/2515245920918872)
 :::
 :::
 
@@ -195,7 +216,7 @@ galah_call() |>
 
 
 ::: {style="color: #ffffff; font-size: 50%"}
-<br><b>of code, mostly</b><br>
+<br><b>*of code, mostly</b><br>
 :::
 
 
@@ -309,7 +330,7 @@ here::here("images", "folder", "subfolder")
 ```{r}
 #| eval: true
 #| echo: false
-print("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023/images/folder/folder")
+print("C:/Users/DaxKellie/OneDrive/Documents/ALA/Talks/ESA2023/images/folder/subfolder")
 ```
 
 ::: aside
@@ -386,7 +407,7 @@ renv::snapshot()
 ## Use GitHub {background-color="#F8F1F5" style="font-size: 80%;"}
 
 
-Share everything you need for a project with version control
+Backup your project online, share your project with others
 
 
 <center>
@@ -517,22 +538,28 @@ summary(model)
 
 ## Document results for easy referencing later {background-color="#FBF2EF" style="font-size: 80%"}
 
+Quickly reference and share your work (because you don't need to rerun your code)
 ![](images/alpha-hulls.mov)
 
 ## Document results for easy referencing later {background-color="#FBF2EF" style="font-size: 80%"}
 
-:::{style="font-size: 120%"}
-
-  *  Rendering a document:
-     *  Allows you to quickly reference work (because you don't need to rerun your code)
-     *  Lets others see data wrangling steps more clearly
-
-  *  Saving them in one place creates an accessible library of usable code. This can be public or private
-
-  *  **Quarto makes this easy**
-
+Quarto is like a refined, updated R Markdown - it's easy and makes documents look *nice*
+<center>
+![](images/quarto-example.png){height=500}
+</center>
+::: aside
+::: {style="font-size: 70%;"}
+[Quarto website](https://quarto.org/)
+:::
 :::
 
+## Document results for easy referencing later {background-color="#FBF2EF" style="font-size: 80%"}
+
+Saving them in one place creates an accessible library of usable code. <br>This can be public or private
+
+<center>
+![](images/posts-labs-library.png){height=450}
+</center>
 
 # Summary {background-color="#ffffff"}
 
@@ -551,6 +578,7 @@ summary(model)
     
   *  Render your code into a document
   
+    -  Quickly reference your work (because you don't need to rerun your code)
     -  Save rendered files somewhere findable/shareable to reference later
     -  Quarto makes this easier than ever
     
@@ -559,7 +587,7 @@ summary(model)
 ::: columns
 ::: {.column width="60%"}
 ::: {style="font-size: 70%;"}
-<br> <b>Dax Kellie</b><br>Data Analyst & Science Lead<br>Science & Decision Support \| ALA <br>e: dax.kellie\@csiro.au<br> t: [\@daxkellie](https://twitter.com/daxkellie)<br> gh: [\@daxkellie](https://github.com/daxkellie) <br> <br> <b>Science & Decision Support team</b><br> Martin Westgate<br> Shandiya Balasubramaniam<br> Olivia Torresan<br> Amanda Buyan<br> <br> <em>These slides were made using Quarto & RStudio</em>
+<br> <b>Dax Kellie</b><br>Data Analyst & Science Lead<br>Science & Decision Support \| ALA <br>e: dax.kellie\@csiro.au<br> {{< fa brands twitter size=lg >}}: [\@daxkellie](https://twitter.com/daxkellie)<br> gh: [\@daxkellie](https://github.com/daxkellie) <br> <br> <b>Science & Decision Support team</b><br> Martin Westgate, Fonti Kar, Olivia Torresan<br> Shandiya Balasubramaniam, Amanda Buyan<br>Juliet Seers, Callum Waite<br> <br> <em>These slides were made using Quarto & RStudio</em>
 :::
 :::
 
