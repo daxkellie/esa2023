@@ -1,5 +1,5 @@
 ---
-title: "<span style='font-size: 3.8rem;'> How to make a sharable code workflow for reproducible and efficient science </span><br>"
+title: "<span style='font-size: 3.8rem;'> How to make a shareable code workflow for reproducible and efficient science </span><br>"
 author: "<br><b>Dax Kellie</b>, Martin Westgate  <br> ![](images/logos/ALA_Logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} ![](images/logos/NCRIS_logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} ![](images/logos/CSIRO_logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} <br> {{< fa brands twitter size=lg >}} <span style='font-size: 2.5rem;'>@daxkellie</span>"
 title-slide-attributes: 
   data-background-color: "#fde5ce"

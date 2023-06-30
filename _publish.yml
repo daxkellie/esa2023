@@ -1,0 +1,4 @@
+- source: index.qmd
+  quarto-pub:
+    - id: e1e697e4-c60b-4e0b-86b8-6ead7321fd1d
+      url: 'https://daxkellie.quarto.pub/how-to-make-a-shareable-code-workflow-for-reproducible-and-efficient-science'
