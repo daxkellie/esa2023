@@ -1,5 +1,5 @@
 ---
-title: "<span style='font-size: 3.8rem;'> How to make a shareable code workflow for reproducible and efficient science </span><br>"
+title: "<span style='font-size: 3.7rem;'> How to make a shareable code workflow for reproducible and efficient science </span><br>"
 author: "<br><b>Dax Kellie</b>, Martin Westgate  <br> ![](images/logos/ALA_Logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} ![](images/logos/NCRIS_logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} ![](images/logos/CSIRO_logo.png){style='width: auto; height: 100px; margin-top: 50px; padding-left: 20px; padding-right: 20px'} <br> {{< fa brands twitter size=lg >}} <span style='font-size: 2.5rem;'>@daxkellie</span>"
 title-slide-attributes: 
   data-background-color: "#fde5ce"
@@ -587,7 +587,7 @@ Saving them in one place creates an accessible library of usable code. <br>This 
 ::: columns
 ::: {.column width="60%"}
 ::: {style="font-size: 70%;"}
-<br> <b>Dax Kellie</b><br>Data Analyst & Science Lead<br>Science & Decision Support \| ALA <br>e: dax.kellie\@csiro.au<br> {{< fa brands twitter size=lg >}}: [\@daxkellie](https://twitter.com/daxkellie)<br> gh: [\@daxkellie](https://github.com/daxkellie) <br> <br> <b>Science & Decision Support team</b><br> Martin Westgate, Fonti Kar, Olivia Torresan<br> Shandiya Balasubramaniam, Amanda Buyan<br>Juliet Seers, Callum Waite<br> <br> <em>These slides were made using Quarto & RStudio</em>
+<br> <b>Dax Kellie</b><br>Data Analyst & Science Lead<br>Science & Decision Support \| ALA <br>{{< fa envelope size=lg >}}: [dax.kellie@csiro.au](mailto:dax.kellie@csiro.au)<br> {{< fa brands twitter size=lg >}}: [\@daxkellie](https://twitter.com/daxkellie)<br> {{< fa brands github size=lg >}}: [\@daxkellie](https://github.com/daxkellie) <br> <br> <b>Science & Decision Support team</b><br> Martin Westgate, Fonti Kar, Olivia Torresan<br> Shandiya Balasubramaniam, Amanda Buyan<br>Juliet Seers, Callum Waite<br> <br> <em>These slides were made using Quarto & RStudio</em>
 :::
 :::
 

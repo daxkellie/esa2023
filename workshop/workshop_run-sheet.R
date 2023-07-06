@@ -20,6 +20,7 @@
 
 # atlas_occurrences() & galah_config()
 
+# map it?
 ggplot() +
   geom_sf(data = ozmaps::ozmap_country, fill = "white") +
   geom_point(data = data)
